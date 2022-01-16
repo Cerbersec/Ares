@@ -147,13 +147,6 @@
     <ClInclude Include="aes.h" />
     <ClInclude Include="headers.h" />
     <ClInclude Include="pkcs7_padding.h" />
-    <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Ares.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\payload.bin" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
