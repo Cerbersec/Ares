@@ -63,8 +63,6 @@ typedef NTSTATUS(NTAPI* PNtGetContextThread)(HANDLE, PCONTEXT);
 typedef NTSTATUS(NTAPI* PNtSetContextThread)(HANDLE, PCONTEXT);
 typedef NTSTATUS(NTAPI* PNtResumeThread)(HANDLE, PULONG);
 
-typedef NTSTATUS(NTAPI* PNtReadVirtualMemory)(HANDLE, PVOID, PVOID, ULONG, PULONG);
-
 unsigned int hash(const char*);
 PVOID GetNTDLLAddr();
 BOOL CheckSandbox(PNtDelayExecution);

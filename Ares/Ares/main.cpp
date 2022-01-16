@@ -237,8 +237,6 @@ int main()
     PNtSetContextThread fpNtSetContextThread = NULL;
     PNtResumeThread fpNtResumeThread = NULL;
 
-    PNtReadVirtualMemory fpNtReadVirtualMemory = NULL;
-
     for (int i = 0; i < pExportDirectory->NumberOfNames; i++) {
         PCSTR pFunctionName = (PSTR)((PBYTE)ntdllBaseAddr + pAddressOfNames[i]);
         if (hash(pFunctionName) == 0x7be7c6ee) {
@@ -300,9 +298,6 @@ int main()
         }
         if (hash(pFunctionName) == 0xf9a01685) {
             fpNtResumeThread = (PNtResumeThread)((PBYTE)ntdllBaseAddr + pAddressOfFunctions[pAddressOfNameOrdinals[i]]);
-        }
-        if (hash(pFunctionName) == 0x5b9b5958) {
-            fpNtReadVirtualMemory = (PNtReadVirtualMemory)((PBYTE)ntdllBaseAddr + pAddressOfFunctions[pAddressOfNameOrdinals[i]]);
         }
     }
 
